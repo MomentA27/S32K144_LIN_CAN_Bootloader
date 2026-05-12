@@ -3,7 +3,17 @@
 -DCPU_S32K144
 -DTURN_ON_CPU0
 -DSTART_FROM_FLASH
+-I"E:/WorkSpace/NXP_Project/S32K/myown_lin/Sources/S32K144_LIN/Debug/inc"
+-I"E:/WorkSpace/NXP_Project/S32K/myown_lin/Sources/S32K144_LIN/HAL/crc_hal/inc"
+-I"E:/WorkSpace/NXP_Project/S32K/myown_lin/Sources/S32K144_LIN/HAL/flash_hal/inc"
+-I"E:/WorkSpace/NXP_Project/S32K/myown_lin/Sources/S32K144_LIN/HAL/timer_hal/inc"
+-I"E:/WorkSpace/NXP_Project/S32K/myown_lin/Sources/S32K144_LIN/HAL/watchdog_hal/inc"
+-I"E:/WorkSpace/NXP_Project/S32K/myown_lin/Sources/S32K144_LIN/public_lin"
+-I"E:/WorkSpace/NXP_Project/S32K/myown_lin/Sources/unified_stack/auto_lib/inc"
+-I"E:/WorkSpace/NXP_Project/S32K/myown_lin/Libraries/DWT_Delay"
 -I"E:/WorkSpace/NXP_Project/S32K/myown_lin/include"
+-I"E:/WorkSpace/NXP_Project/S32K/myown_lin/Sources/unified_stack/FIFO/inc"
+-I"E:/WorkSpace/NXP_Project/S32K/myown_lin/Sources/S32K144_LIN/HAL"
 -I"E:/WorkSpace/NXP_Project/S32K/myown_lin/Generated_Code"
 -I"E:/WorkSpace/NXP_Project/S32K/myown_lin/Sources"
 -I"E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/src/clock/S32K1xx"
@@ -12,6 +22,7 @@
 -I"E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/devices/S32K144/include"
 -I"E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/devices/S32K144/startup"
 -I"E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc"
+-I"E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/rtos/osif/"
 -O1
 -g
 -pedantic

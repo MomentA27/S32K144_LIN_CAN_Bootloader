@@ -8,10 +8,21 @@ Generated_Code/Cpu.o: ../Generated_Code/Cpu.c ../Generated_Code/Cpu.h \
  E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc/clock.h \
  E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/devices/status.h \
  e:\workspace\nxp_project\s32k\myown_lin\sdk\platform\drivers\src\clock\s32k1xx\clock_s32k1xx.h \
+ E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc/wdog_driver.h \
+ E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc/interrupt_manager.h \
+ E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc/crc_driver.h \
+ E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc/flash_driver.h \
+ E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc/edma_driver.h \
+ E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/rtos/osif/osif.h \
+ E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc/lpuart_driver.h \
+ E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc/edma_driver.h \
+ E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/devices/callbacks.h \
  E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/devices/S32K144/startup/system_S32K144.h \
  ../Generated_Code/pin_mux.h \
  E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc/pins_driver.h \
- ../Generated_Code/clockMan1.h
+ ../Generated_Code/clockMan1.h ../Generated_Code/watchdog1.h \
+ ../Generated_Code/crc1.h ../Generated_Code/Flash1.h \
+ ../Generated_Code/lpuart1.h ../Generated_Code/dmaController1.h
 
 ../Generated_Code/Cpu.h:
 
@@ -33,6 +44,24 @@ E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/devices/status.h:
 
 e:\workspace\nxp_project\s32k\myown_lin\sdk\platform\drivers\src\clock\s32k1xx\clock_s32k1xx.h:
 
+E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc/wdog_driver.h:
+
+E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc/interrupt_manager.h:
+
+E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc/crc_driver.h:
+
+E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc/flash_driver.h:
+
+E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc/edma_driver.h:
+
+E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/rtos/osif/osif.h:
+
+E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc/lpuart_driver.h:
+
+E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc/edma_driver.h:
+
+E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/devices/callbacks.h:
+
 E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/devices/S32K144/startup/system_S32K144.h:
 
 ../Generated_Code/pin_mux.h:
@@ -40,3 +69,13 @@ E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/devices/S32K144/startup/sys
 E:/WorkSpace/NXP_Project/S32K/myown_lin/SDK/platform/drivers/inc/pins_driver.h:
 
 ../Generated_Code/clockMan1.h:
+
+../Generated_Code/watchdog1.h:
+
+../Generated_Code/crc1.h:
+
+../Generated_Code/Flash1.h:
+
+../Generated_Code/lpuart1.h:
+
+../Generated_Code/dmaController1.h:

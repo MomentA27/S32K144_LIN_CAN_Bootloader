@@ -70,6 +70,161 @@ Module "intMan1"   (component interrupt_manager)
    - intMan1_INT_SYS_GetPending -Get Pending Interrupt.
    - intMan1_INT_SYS_GetActive -Get Active Interrupt.
 
+Module "watchdog1" (component wdog)
+   - watchdog1_WDOG_DRV_Init -Initializes the WDOG driver.
+   - watchdog1_WDOG_DRV_Deinit -De-initializes the WDOG driver.
+   - watchdog1_WDOG_DRV_GetConfig -Gets the current configuration of the WDOG.
+   - watchdog1_WDOG_DRV_GetDefaultConfig -Gets default configuration of the WDOG.
+   - watchdog1_WDOG_DRV_SetInt -Enables/Disables the WDOG timeout interrupt and sets a function to be called when a timeout 
+                interrupt is received, before reset.
+   - watchdog1_WDOG_DRV_ClearIntFlag -Clear interrupt flag of the WDOG.
+   - watchdog1_WDOG_DRV_Trigger -Refreshes the WDOG counter.
+   - watchdog1_WDOG_DRV_GetCounter -Gets the value of the WDOG counter.
+   - watchdog1_WDOG_DRV_SetWindow -Set window mode and window value of the WDOG.
+   - watchdog1_WDOG_DRV_SetMode -Sets the mode operation of the WDOG.
+   - watchdog1_WDOG_DRV_SetTimeout -Sets the value of the WDOG timeout.
+   - watchdog1_WDOG_DRV_SetTestMode -This function changes the test mode of the WDOG. If the WDOG is tested in mode, software 
+                should set this field to 0x01U in order to indicate that the WDOG is functioning normally.
+   - watchdog1_WDOG_DRV_GetTestMode -This function verifies the test mode of the WDOG.
+
+Module "crc1"      (component crc)
+   - crc1_CRC_DRV_Init -This function initializes CRC driver based on user configuration input. The user must make sure that 
+                the clock is enabled.
+   - crc1_CRC_DRV_Deinit -This function sets the default configuration.
+   - crc1_CRC_DRV_WriteData -This function appends a block of bytes to the current CRC calculation.
+   - crc1_CRC_DRV_GetCrcResult -This function returns the current result of the CRC calculation.
+   - crc1_CRC_DRV_Configure -This function configures the CRC module from a user configuration structure.
+   - crc1_CRC_DRV_GetCrc32 -This function appends 32-bit data to the current CRC calculation and returns new result.
+   - crc1_CRC_DRV_GetCrc16 -This function appends 16-bit data to the current CRC calculation and returns new result.
+   - crc1_CRC_DRV_GetCrc8 -This function appends 8-bit data to the current CRC calculation and returns new result.
+   - crc1_CRC_DRV_GetConfig -This function Get configures of the CRC module currently.
+   - crc1_CRC_DRV_GetDefaultConfig -This function Get default configures the CRC module for user configuration structure.
+
+Module "Flash1"    (component flash)
+   - Flash1_FLASH_DRV_Init -Flash initialization.
+   - Flash1_FLASH_DRV_GetPFlashProtection -P-Flash get protection.
+   - Flash1_FLASH_DRV_SetPFlashProtection -P-Flash set protection.
+   - Flash1_FLASH_DRV_GetSecurityState -Flash get security state.
+   - Flash1_FLASH_DRV_SecurityBypass -Flash security bypass.
+   - Flash1_FLASH_DRV_EraseAllBlock -Flash erase all Blocks.
+   - Flash1_FLASH_DRV_VerifyAllBlock -Flash verify all Blocks.
+   - Flash1_FLASH_DRV_EraseSector -Flash erase sector.
+   - Flash1_FLASH_DRV_VerifySection -Flash verify sector.
+   - Flash1_FLASH_DRV_EraseSuspend -Flash erase suspend.
+   - Flash1_FLASH_DRV_EraseResume -Flash erase resume.
+   - Flash1_FLASH_DRV_ReadOnce -Flash read once.
+   - Flash1_FLASH_DRV_ProgramOnce -Flash program once.
+   - Flash1_FLASH_DRV_Program -Flash program.
+   - Flash1_FLASH_DRV_ProgramCheck -Flash program check.
+   - Flash1_FLASH_DRV_CheckSum -Calculate check sum.
+   - Flash1_FLASH_DRV_ProgramSection -Flash program section.
+   - Flash1_FLASH_DRV_EraseBlock -Flash erase block.
+   - Flash1_FLASH_DRV_VerifyBlock -Flash verify block.
+   - Flash1_FLASH_DRV_GetEERAMProtection -EERAM get protection.
+   - Flash1_FLASH_DRV_SetEERAMProtection -EERAM set protection.
+   - Flash1_FLASH_DRV_SetFlexRamFunction -Flash Set FlexRam function command.
+   - Flash1_FLASH_DRV_EEEWrite -EEPROM Emulator Write.
+   - Flash1_FLASH_DRV_DEFlashPartition -Flash D/E-Flash Partition.
+   - Flash1_FLASH_DRV_GetDFlashProtection -D-Flash get protection.
+   - Flash1_FLASH_DRV_SetDFlashProtection -D-Flash set protection.
+   - Flash1_FLASH_DRV_PFlashSwap -swap between the two half of total logical P-Flash memory blocks within the memory map
+   - Flash1_FLASH_DRV_PFlashSwapCtl -implements swap control command corresponding with swap control code provided via swapcmd 
+                parameter
+   - Flash1_FLASH_DRV_EraseAllBlockUnsecure -Flash erase all Blocks.
+   - Flash1_FLASH_DRV_EnableCmdCompleteInterupt -Enable the command complete interrupt.
+   - Flash1_FLASH_DRV_DisableCmdCompleteInterupt -Disable the command complete interrupt.
+   - Flash1_FLASH_DRV_GetCmdCompleteFlag -Check the command complete flag has completed or not.
+   - Flash1_FLASH_DRV_EnableReadColisionInterupt -Enable the read collision error interrupt.
+   - Flash1_FLASH_DRV_DisableReadColisionInterupt -Disable the read collision error interrupt.
+   - Flash1_FLASH_DRV_GetReadColisionFlag -Check the read collision error flag is detected or not.
+   - Flash1_FLASH_DRV_ClearReadColisionFlag -Clear the read collision error flag.
+   - Flash1_FLASH_DRV_EnableDoubleBitFaultInterupt -Enable the double bit fault detect interrupt.
+   - Flash1_FLASH_DRV_DisableDoubleBitFaultInterupt -Disable the double bit fault detect interrupt.
+   - Flash1_FLASH_DRV_GetDoubleBitFaultFlag -Check the double bit fault flag is detected or not.
+   - Flash1_FLASH_DRV_ClearDoubleBitFaultFlag -Clear the double bit fault detect flag.
+   - Flash1_FLASH_DRV_ForceDoubleBitFaultDetectCmd -Force Double Bit Fault Detect.
+   - Flash1_FLASH_DRV_GetDefaultConfig -Get default flash user configuration.
+
+Module "lpuart1"   (component lpuart)
+   - lpuart1_LPUART_DRV_GetDefaultConfig -Initializes the LPUART configuration structure with default values.
+   - lpuart1_LPUART_DRV_Init -Initializes an LPUART operation instance.
+   - lpuart1_LPUART_DRV_Deinit -Shuts down the LPUART by disabling interrupts and transmitter/receiver.
+   - lpuart1_LPUART_DRV_InstallRxCallback -Installs callback function for the LPUART receive.
+   - lpuart1_LPUART_DRV_InstallTxCallback -Installs callback function for the LPUART transmit.
+   - lpuart1_LPUART_DRV_SendDataBlocking -Sends data out through the LPUART module using a blocking method.
+   - lpuart1_LPUART_DRV_SendDataPolling -Send out multiple bytes of data using polling method.
+   - lpuart1_LPUART_DRV_SendData -Sends data out through the LPUART module using a non-blocking method. This enables an a-sync 
+                method for transmitting data. When used with a non-blocking receive, the LPUART can perform a full duplex 
+                operation. Non-blocking means that the function returns immediately. The application has to get the transmit 
+                status to know when the transmit is complete.
+   - lpuart1_LPUART_DRV_GetTransmitStatus -Returns whether the previous transmit is complete.
+   - lpuart1_LPUART_DRV_AbortSendingData -Terminates a non-blocking transmission early.
+   - lpuart1_LPUART_DRV_ReceiveDataBlocking -Gets data from the LPUART module by using a blocking method. Blocking means that 
+                the function does not return until the receive is complete.
+   - lpuart1_LPUART_DRV_ReceiveDataPolling -Receive multiple bytes of data using polling method.
+   - lpuart1_LPUART_DRV_ReceiveData -Gets data from the LPUART module by using a non-blocking method. This enables an a-sync 
+                method for receiving data. When used with a non-blocking transmission, the LPUART can perform a full duplex 
+                operation. Non-blocking means that the function returns immediately. The application has to get the receive 
+                status to know when the receive is complete.
+   - lpuart1_LPUART_DRV_GetReceiveStatus -Returns whether the previous receive is complete.
+   - lpuart1_LPUART_DRV_AbortReceivingData -Terminates a non-blocking receive early.
+   - lpuart1_LPUART_DRV_SetBaudRate -Configures the LPUART baud rate.
+   - lpuart1_LPUART_DRV_GetBaudRate -Returns the LPUART baud rate.
+   - lpuart1_LPUART_DRV_SetTxBuffer -Sets the internal driver reference to the tx buffer.
+   - lpuart1_LPUART_DRV_SetRxBuffer -Sets the internal driver reference to the rx buffer.
+
+Module "dmaController1" (component edma)
+   - dmaController1_EDMA_DRV_Init -Initializes the eDMA module.
+   - dmaController1_EDMA_DRV_Deinit -Shuts down the eDMA module.
+   - dmaController1_EDMA_DRV_ChannelInit -Initializes a eDMA channel.
+   - dmaController1_EDMA_DRV_ReleaseChannel -Releases an eDMA channel.
+   - dmaController1_EDMA_DRV_StartChannel -Starts an eDMA channel.
+   - dmaController1_EDMA_DRV_StopChannel -Stops the eDMA channel.
+   - dmaController1_EDMA_DRV_InstallCallback -Registers the callback function and the parameter for eDMA channel.
+   - dmaController1_EDMA_DRV_GetChannelStatus -Gets the eDMA channel status.
+   - dmaController1_EDMA_DRV_PushConfigToReg -Copies the channel configuration to the TCD registers.
+   - dmaController1_EDMA_DRV_PushConfigToSTCD -Copies the channel configuration to the software TCD structure.
+   - dmaController1_EDMA_DRV_ConfigSingleBlockTransfer -Configures a simple single block data transfer with DMA. This function 
+                configures the descriptor for a single block transfer.
+   - dmaController1_EDMA_DRV_ConfigLoopTransfer -Configures the DMA transfer in loop mode.
+   - dmaController1_EDMA_DRV_ConfigScatterGatherTransfer -Configures the DMA transfer in a scatter-gather mode.
+   - dmaController1_EDMA_DRV_ConfigMultiBlockTransfer -Configures a multiple block data transfer with DMA. This function 
+                configures the descriptor for a multi block transfer.
+   - dmaController1_EDMA_DRV_CancelTransfer -Cancels the remaining data transfer.
+   - dmaController1_EDMA_DRV_SetChannelRequestAndTrigger -Configures the DMA request and periodic trigger for the eDMA channel.
+   - dmaController1_EDMA_DRV_ClearTCD -Clears all registers to 0 for the channel's TCD.
+   - dmaController1_EDMA_DRV_SetSrcAddr -Configures the source address for the eDMA channel.
+   - dmaController1_EDMA_DRV_SetSrcOffset -Configures the source address signed offset for the eDMA channel.
+   - dmaController1_EDMA_DRV_SetSrcReadChunkSize -Configures the source data chunk size (transferred in a read sequence).
+   - dmaController1_EDMA_DRV_SetDestAddr -Configures the destination address for the eDMA channel.
+   - dmaController1_EDMA_DRV_SetDestOffset -Configures the destination address signed offset for the eDMA channel.
+   - dmaController1_EDMA_DRV_SetDestWriteChunkSize -Configures the destination data chunk size (transferred in a write sequence)
+                .
+   - dmaController1_EDMA_DRV_SetMinorLoopBlockSize -Configures the number of bytes to be transferred in each service request of 
+                the channel.
+   - dmaController1_EDMA_DRV_SetMajorLoopIterationCount -Configures the number of major loop iterations.
+   - dmaController1_EDMA_DRV_GetRemainingMajorIterationsCount -Returns the remaining major loop iteration count.
+   - dmaController1_EDMA_DRV_SetScatterGatherLink -Configures the memory address of the next TCD, in scatter/gather mode.
+   - dmaController1_EDMA_DRV_DisableRequestsOnTransferComplete -Disables/Enables the DMA request after the major loop completes 
+                for the TCD.
+   - dmaController1_EDMA_DRV_SetSrcLastAddrAdjustment -Configures the source address last adjustment.
+   - dmaController1_EDMA_DRV_SetDestLastAddrAdjustment -Configures the destination address last adjustment.
+   - dmaController1_EDMA_DRV_ConfigureInterrupt -Disables/Enables the channel interrupt requests.
+   - dmaController1_EDMA_DRV_TriggerSwRequest -Triggers a sw request for the current channel.
+
+Module "osif1"     (component osif)
+   - osif1_OSIF_TimeDelay -Delays execution for a number of milliseconds.
+   - osif1_OSIF_MutexLock -Waits for a mutex and locks it.
+   - osif1_OSIF_MutexUnlock -Unlocks a previously locked mutex.
+   - osif1_OSIF_MutexCreate -Create an unlocked mutex.
+   - osif1_OSIF_MutexDestroy -Destroys a previously created mutex.
+   - osif1_OSIF_SemaWait -Decrement a semaphore with timeout.
+   - osif1_OSIF_SemaPost -Increment a semaphore.
+   - osif1_OSIF_SemaCreate -Creates a semaphore with a given value.
+   - osif1_OSIF_SemaDestroy -Destroys a previously created semaphore.
+   - osif1_OSIF_GetMilliseconds -Returns the number of miliseconds elapsed since starting the internal timer or starting the 
+                scheduler.
+
 Module "Cpu"       (component S32K144_100)
    - Cpu_SystemInit -This function disables the watchdog, enables FPU and the power mode protection. SystemInit is called from 
                 startup_device file.

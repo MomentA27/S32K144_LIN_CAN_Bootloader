@@ -7,7 +7,7 @@
 **     Version     : Component 01.197, Driver 01.00, CPU db: 3.00.000
 **     Datasheet   : S32K14XRM Rev. 2, 02/2017
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2026-05-07, 19:37, # CodeGen: 0
+**     Date/Time   : 2026-05-12, 17:43, # CodeGen: 5
 **     Abstract    :
 **
 **     Settings    :
@@ -59,11 +59,22 @@
 
 #include "interrupt_manager.h"
 #include "clock.h"
+#include "wdog_driver.h"
+#include "crc_driver.h"
+#include "flash_driver.h"
+#include "edma_driver.h"
+#include "osif.h"
+#include "lpuart_driver.h"
 #include "system_S32K144.h"
 
 /* Including needed modules to compile this module/procedure */
 #include "pin_mux.h"
 #include "clockMan1.h"
+#include "watchdog1.h"
+#include "crc1.h"
+#include "Flash1.h"
+#include "lpuart1.h"
+#include "dmaController1.h"
 
 #ifdef __cplusplus
 extern "C" {

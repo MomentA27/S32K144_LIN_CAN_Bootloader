@@ -8,9 +8,22 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include Sources/unified_stack/auto_lib/src/subdir.mk
+-include Sources/unified_stack/FIFO/src/subdir.mk
+-include Sources/S32K144_LIN/HAL/watchdog_hal/src/subdir.mk
+-include Sources/S32K144_LIN/HAL/timer_hal/src/subdir.mk
+-include Sources/S32K144_LIN/HAL/flash_hal/src/subdir.mk
+-include Sources/S32K144_LIN/HAL/crc_hal/src/subdir.mk
+-include Sources/S32K144_LIN/Debug/src/subdir.mk
 -include Sources/subdir.mk
+-include SDK/rtos/osif/subdir.mk
+-include SDK/platform/drivers/src/wdog/subdir.mk
 -include SDK/platform/drivers/src/pins/subdir.mk
+-include SDK/platform/drivers/src/lpuart/subdir.mk
 -include SDK/platform/drivers/src/interrupt/subdir.mk
+-include SDK/platform/drivers/src/flash/subdir.mk
+-include SDK/platform/drivers/src/edma/subdir.mk
+-include SDK/platform/drivers/src/crc/subdir.mk
 -include SDK/platform/drivers/src/clock/S32K1xx/subdir.mk
 -include SDK/platform/devices/S32K144/startup/subdir.mk
 -include SDK/platform/devices/subdir.mk
